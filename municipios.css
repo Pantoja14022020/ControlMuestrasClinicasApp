@@ -1,12 +1,41 @@
 *{
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Archivo', sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
 }
 
 body{
     background-color: hsl(251, 100%, 97%);
 }
+
+
+
+#nav-search{
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+}
+#nav-search i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #bbbbbb;
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+#search-municipio{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0.8rem;
+    padding-left: 2.5rem !important;
+    border-radius: 0.5rem;
+    color: #575757;
+    font-size: 0.9rem;
+}
+
+
 
 #contenedor-carpetas{
     width: 100%;
@@ -14,10 +43,11 @@ body{
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: center;
     padding: 0.8rem;
 }
 .carpeta{
-    width: 48%;
+    width: 46%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,15 +58,37 @@ body{
     border-radius: 0.5rem;
     box-shadow: rgba(102, 130, 252, 0.1) 0px 10px 50px;
     transition: all ease-in-out 0.3s;
+    margin: 0.3rem;
 }
 .carpeta:hover{
     transform: scale(1.02);
 }
 .carpeta img{
-    width: 120px;
+    width: 80px;
 }
 .carpeta p{
-    font-size: 0.8rem;
-    color: #797979;
-    letter-spacing: 0.05rem;
+    font-size: 0.9rem;
+    color: #575757;
+    font-weight: 900;
+}
+
+
+
+#agregar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: #2e9de2;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 1rem;
+    color: #fff;
 }
