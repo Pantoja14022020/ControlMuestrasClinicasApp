@@ -1,40 +1,40 @@
 *{
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
 }
 
 body{
     background-color: hsl(251, 100%, 97%);
 }
 
+
+
 #nav-search{
     width: 100%;
-    padding: 0.3rem;
+    padding: 1rem;
     position: relative;
 }
 #nav-search i{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: #bfbfbf;
+    color: #bbbbbb;
     margin-left: 0.5rem;
     font-size: 1.5rem;
     font-weight: 900;
-
 }
-
 #search-comunidad{
     width: 100%;
     outline: none;
     border: none;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    padding: 0.5rem;
+    padding: 0.8rem;
     padding-left: 2.5rem !important;
+    border-radius: 0.5rem;
+    color: #575757;
     font-size: 0.9rem;
-
 }
+
 
 
 #contenedor-carpetas{
@@ -42,12 +42,12 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /*flex-wrap: wrap;*/
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    align-items: center;
     padding: 0.8rem;
 }
 .carpeta{
-    width: 48%;
+    width: 46%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,7 +58,7 @@ body{
     border-radius: 0.5rem;
     box-shadow: rgba(102, 130, 252, 0.1) 0px 10px 50px;
     transition: all ease-in-out 0.3s;
-    margin: 0.2rem;
+    margin: 0.3rem;
 }
 .carpeta:hover{
     transform: scale(1.02);
@@ -68,9 +68,11 @@ body{
 }
 .carpeta p{
     font-size: 0.9rem;
-    color: #797979;
-    letter-spacing: 0.05rem;
+    color: #575757;
+    font-weight: 900;
 }
+
+
 
 #agregar{
     display: flex;
