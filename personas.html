@@ -14,58 +14,47 @@
   </head>
   <body>
     <div class="busqueda">
-        <nav id="nav-search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="search" name="buscar-persona" id="search-persona" />
-        </nav>
-        <div id="filtros">
-            <button class="filtro">
-                <i class="fa-solid fa-filter"></i>
-                <p>Apellido</p>
-            </button>
-            <button class="filtro">
-                <i class="fa-solid fa-filter"></i>
-                <p>Edad</p>
-            </button>
-            <button class="filtro">
-                <i class="fa-solid fa-filter"></i>
-                <p>...</p>
-            </button>
-        </div>
+      <nav id="nav-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" name="buscar-persona" id="search-persona" />
+      </nav>
+      <div id="filtros">
+        <button class="filtro">
+          <p>apellido</p>
+        </button>
+        <button class="filtro">
+          <p>edad</p>
+        </button>
+      </div>
     </div>
-    
-    
+
     <main id="contenedor-personas">
-        <a class="persona" src="">
-            <i class="fa-solid fa-user-large" id="person-icon"></i>
-            <div class="persona-info">        
-                <h2>Nombre</h2>
-                <p>Edad</p>
-            </div>
-            <div class="actividad-persona">
-                <i class="fa-brands fa-creative-commons-sampling" ></i>
-            </div>
-        </a>
-        <a class="persona" src="">
-            <i class="fa-solid fa-user-large" id="person-icon"></i>
-            <div class="persona-info">        
-                <h2>Nombre</h2>
-                <p>Edad</p>
-            </div>
-            <div class="actividad-persona">
-                <i class="fa-brands fa-creative-commons-sampling" ></i>
-            </div>
-        </a>
-        <a class="persona" src="">
-            <i class="fa-solid fa-user-large" id="person-icon"></i>
-            <div class="persona-info">        
-                <h2>Nombre</h2>
-                <p>Edad</p>
-            </div>
-            <div class="actividad-persona">
-                <i class="fa-brands fa-creative-commons-sampling" ></i>
-            </div>
-        </a>
+      <div class="persona" href="#">
+        <div class="persona-left">
+          <i class="fa-solid fa-user-large" id="person-icon"></i>
+          <div class="persona-info">
+            <h2>Nombre</h2>
+            <p>Edad</p>
+          </div>
+        </div>
+        <div class="actividad-persona">
+          <div class="status"></div>
+          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="persona" href="#">
+        <div class="persona-left">
+          <i class="fa-solid fa-user-large" id="person-icon"></i>
+          <div class="persona-info">
+            <h2>Nombre</h2>
+            <p>Edad</p>
+          </div>
+        </div>
+        <div class="actividad-persona">
+          <div class="status"></div>
+          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
     </main>
 
     <button id="agregar"><i class="fa-solid fa-plus"></i></button>

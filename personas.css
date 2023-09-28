@@ -40,10 +40,8 @@ body{
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: left;
-    flex-wrap: wrap;
     align-items: center;
-    padding-top: 0.8rem;
+    margin: 1rem 0;
 }
 .filtro{
     outline: none;
@@ -54,11 +52,19 @@ body{
     align-items: center;
     position: relative;
     padding: 0.5rem;
-    margin-right: 0.8rem;
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
     background-color: #fff;
-    color: #2e9de2;
-    font-size: 12px;
+    color: #bbbbbb;
+    margin-right: 0.8rem;
+    font-size: 0.8rem;
+    transition: all ease-in-out 0.3s;
+}
+.filtro:hover{
+    background-color: #2e9de2;
+    color: white;
+}
+.filtro:last-child{
+    margin-right: 0;
 }
 .filtro i{
     color: #3b9aff;
@@ -71,46 +77,66 @@ body{
     position: relative;
     width: 100%;
     padding: 1rem;
+    padding-top: 0rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
 }
-a.persona{
+.persona{
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content:left ;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: nowrap;
     align-items: center;
     background-color: #fff;
     border-radius: 0.5rem;
     margin-bottom: 0.5rem;
 }
-a.persona h2{
-    font-size: 15px;
-}
-a.persona p{
-    font-size: 13px;
-}
-.persona i{
+
+.persona i:first-child{
     color: #5db0fe;
     margin: 0.8rem;
-    background-color: hsl(251, 100%, 97%);
     border-radius: 50%;
 }
 #person-icon{
     padding: 0.8rem;
 }
-.persona-info{ 
-    width: 100px;
-    
+.persona-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
-.actividad-persona i{
-    margin-left: auto; 
-    color: #ffa82e;
-    margin: 0.6rem;
+.persona h2{
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0.2rem;
+}
+.persona p{
+    font-size: 0.8rem;
+}
+.actividad-persona{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.status{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #5eff81;
+    margin-right: 1rem;
+}
+.actividad-persona > a{
+    background-color: white !important;
+    text-decoration: none;
+}
+.actividad-persona a i:last-child{
+    margin-right: 0.5rem;
+    color: #3b9aff;
 }
 
 
