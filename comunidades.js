@@ -67,6 +67,20 @@ $.ajax({
                     containerUnidades.innerHTML += htmlCarpeta;
                 }
             })
+
+
+            containerUnidades.childNodes.forEach(carpeta => {
+                carpeta.addEventListener('click', e => {
+                    let valorSeleccionado = "";
+                    if(!e.target.getAttribute('data-name-unidad')){
+                        valorSeleccionado = e.target.parentNode.getAttribute('data-name-unidad')
+                    }else{
+                        valorSeleccionado = e.target.getAttribute('data-name-unidad')
+                    }
+                    localStorage.setItem('carpetaSeleccionada', JSON.stringify(valorSeleccionado));
+    
+                });
+            })
             
         });
         //AQUI TERMINA CODIGO PARA HACER LA FUNCIONALIDAD DEL BUSCADOR
@@ -78,7 +92,6 @@ $.ajax({
         //CAPTURAR EVENTO CUANDO SE DE CLICK EN UNA CARPETA Y GUARDAR EL DATO EN EL LOCAL STORAGE
         containerUnidades.childNodes.forEach(carpeta => {
             carpeta.addEventListener('click', e => {
-
                 let valorSeleccionado = "";
                 if(!e.target.getAttribute('data-name-unidad')){
                     valorSeleccionado = e.target.parentNode.getAttribute('data-name-unidad')

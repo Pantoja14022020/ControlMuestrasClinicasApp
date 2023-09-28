@@ -1,5 +1,6 @@
 let urlGetMunicipios = 'https://clinicalserviceapi.onrender.com/api/paciente';
 const unidadSeleccionada = JSON.parse(localStorage.getItem('carpetaSeleccionada')).toUpperCase();
+console.log(localStorage.getItem('carpetaSeleccionada'))
 const contenedorPersonas = document.getElementById('contenedor-personas');
 const loaderAnimation = document.getElementById('loader-animation');//Selecciono el loader que hice
 const searchPersona = document.getElementById('search-persona');//Selecciono el input de buscador
@@ -14,11 +15,6 @@ $.ajax({
         //localStorage.removeItem('carpetaSeleccionada')
 
         const pacientesDeUnidad = new Set();
-        var _id_paciente;
-        var _nombre;
-        var _a_paterno;
-        var _a_materno;
-        var _edad;
 
         pacientes.forEach(paciente => {
             const {id_paciente,unidad,nombre,a_paterno,a_materno,edad} = paciente;
