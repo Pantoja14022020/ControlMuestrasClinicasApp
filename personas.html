@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="personas.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <div class="busqueda">
@@ -29,35 +30,11 @@
     </div>
 
     <main id="contenedor-personas">
-      <div class="persona" href="#">
-        <div class="persona-left">
-          <i class="fa-solid fa-user-large" id="person-icon"></i>
-          <div class="persona-info">
-            <h2>Nombre</h2>
-            <p>Edad</p>
-          </div>
-        </div>
-        <div class="actividad-persona">
-          <div class="status"></div>
-          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-      </div>
-      <div class="persona" href="#">
-        <div class="persona-left">
-          <i class="fa-solid fa-user-large" id="person-icon"></i>
-          <div class="persona-info">
-            <h2>Nombre</h2>
-            <p>Edad</p>
-          </div>
-        </div>
-        <div class="actividad-persona">
-          <div class="status"></div>
-          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-      </div>
+      <div id="loader-animation" class="loader"></div>
     </main>
 
     <button id="agregar"><i class="fa-solid fa-plus"></i></button>
+    <script src="personas.js"></script>
     <script
       src="https://kit.fontawesome.com/eee10799b3.js"
       crossorigin="anonymous"
