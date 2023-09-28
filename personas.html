@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="personas.css" />
+  </head>
+  <body>
+    <div class="busqueda">
+        <nav id="nav-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" name="buscar-persona" id="search-persona" />
+        </nav>
+        <div id="filtros">
+            <button class="filtro">
+                <i class="fa-solid fa-filter"></i>
+                <p>Apellido</p>
+            </button>
+            <button class="filtro">
+                <i class="fa-solid fa-filter"></i>
+                <p>Edad</p>
+            </button>
+            <button class="filtro">
+                <i class="fa-solid fa-filter"></i>
+                <p>...</p>
+            </button>
+        </div>
+    </div>
+    
+    
+    <main id="contenedor-personas">
+        <a class="persona" src="">
+            <i class="fa-solid fa-user-large" id="person-icon"></i>
+            <div class="persona-info">        
+                <h2>Nombre</h2>
+                <p>Edad</p>
+            </div>
+            <div class="actividad-persona">
+                <i class="fa-brands fa-creative-commons-sampling" ></i>
+            </div>
+        </a>
+        <a class="persona" src="">
+            <i class="fa-solid fa-user-large" id="person-icon"></i>
+            <div class="persona-info">        
+                <h2>Nombre</h2>
+                <p>Edad</p>
+            </div>
+            <div class="actividad-persona">
+                <i class="fa-brands fa-creative-commons-sampling" ></i>
+            </div>
+        </a>
+        <a class="persona" src="">
+            <i class="fa-solid fa-user-large" id="person-icon"></i>
+            <div class="persona-info">        
+                <h2>Nombre</h2>
+                <p>Edad</p>
+            </div>
+            <div class="actividad-persona">
+                <i class="fa-brands fa-creative-commons-sampling" ></i>
+            </div>
+        </a>
+    </main>
+
+    <button id="agregar"><i class="fa-solid fa-plus"></i></button>
+    <script
+      src="https://kit.fontawesome.com/eee10799b3.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

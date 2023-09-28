@@ -8,9 +8,11 @@ body{
     background-color: hsl(251, 100%, 97%);
 }
 
+.busqueda{
+    padding: 1rem;
+}
 #nav-search{
     width: 100%;
-    padding: 1rem;
     position: relative;
 }
 #nav-search i{
@@ -22,7 +24,7 @@ body{
     font-size: 1.5rem;
     font-weight: 900;
 }
-#search-comunidad{
+#search-persona{
     width: 100%;
     outline: none;
     border: none;
@@ -33,42 +35,82 @@ body{
     font-size: 0.9rem;
 }
 
-
-
-
-#contenedor-carpetas{
+/**FILTROS*/
+#filtros{
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 0.8rem;
+}
+.filtro{
+    outline: none;
+    border: none;
+    padding-right: 3rem;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem;
+    margin-right: 0.8rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    color: #2e9de2;
+    font-size: 12px;
+}
+.filtro i{
+    color: #3b9aff;
+    padding-right: 0.3rem;
+}
+
+
+/*PERSONAS**/
+#contenedor-personas{
+    position: relative;
+    width: 100%;
+    padding: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+}
+a.persona{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:left ;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+a.persona h2{
+    font-size: 15px;
+}
+a.persona p{
+    font-size: 13px;
+}
+.persona i{
+    color: #5db0fe;
+    margin: 0.8rem;
+    background-color: hsl(251, 100%, 97%);
+    border-radius: 50%;
+}
+#person-icon{
     padding: 0.8rem;
 }
-.carpeta{
-    width: 46%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-color: #fff;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    box-shadow: rgba(102, 130, 252, 0.1) 0px 10px 50px;
-    transition: all ease-in-out 0.3s;
-    margin: 0.3rem;
+.persona-info{ 
+    width: 100px;
+    
 }
-.carpeta:hover{
-    transform: scale(1.02);
-}
-.carpeta img{
-    width: 80px;
-}
-.carpeta p{
-    font-size: 0.9rem;
-    color: #575757;
-    font-weight: 900;
+.actividad-persona i{
+    margin-left: auto; 
+    color: #ffa82e;
+    margin: 0.6rem;
 }
 
 
