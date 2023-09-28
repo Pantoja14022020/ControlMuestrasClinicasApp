@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+body{
+    background-color: hsl(251, 100%, 97%);
+}
+
+/*LETRERO*/
+#letrero{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    flex-wrap: nowrap;
+    align-items: center;
+    border-radius: 0.5rem;
+    padding-top: 1rem;
+}
+#letrero .titulo{
+    padding-left: 0.6rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+}
+#form-icon{
+    padding: 0.8rem;
+    background-color: #2e9de2;
+    border-radius: 50%;
+    margin-left: 1rem;
+    color: #fff;
+}
+
+/*CITA FORM*/
+#contenedor-form{
+    position: relative;
+    margin-top: 1.2rem;
+    width: 100%;
+    padding-top: 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.input-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 1rem;
+}
+.input-box label{
+    padding: 1rem;
+}
+form .checkbox {
+    padding: 1rem;
+
+}
+form .checkbox input {
+    height: auto;
+}
+form :where(input, select) {
+    height: 40px;
+    padding: 0 1em;
+    border-radius: 7px;
+    outline-color: #2e9de2;
+    border: 1px;
+    background-color: #f2f2f2;
+}
+form label {
+    font-size: 1rem;
+    font-weight: 600;
+}
+form input{
+    max-width: 70px;
+    text-align: center;
+    margin-right: 1em;
+}
+
+
+
+
+
+/*BOTON*/
+#enviar-cita{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: #2e9de2;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 1rem;
+    color: #fff;
+}
