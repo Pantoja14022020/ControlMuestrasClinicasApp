@@ -8,6 +8,8 @@ body{
     background-color: hsl(251, 100%, 97%);
 }
 
+
+
 #nav-search{
     width: 100%;
     padding: 1rem;
@@ -35,7 +37,10 @@ body{
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 24fc671d43d3c0a4bca34a6e3821f7915757bd10
 #contenedor-carpetas{
     width: 100%;
     display: flex;
