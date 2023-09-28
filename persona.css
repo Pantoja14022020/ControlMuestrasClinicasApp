@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+body{
+    background-color: hsl(251, 100%, 97%);
+}
+
+#menu{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    flex-wrap: nowrap;
+    align-items: center;
+    border-radius: 0.5rem;
+    padding-top: 1rem;
+}
+#menu .persona{
+    padding-left: 0.6rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+}
+#person-icon{
+    padding: 0.8rem;
+}
+.persona-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*MENU**/
+#citas{
+    padding: 1rem;
+}
+#citas-menu{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.6rem 0;
+}
+
+
+
+/*CITAS**/
+#contenedor-citas{
+    position: relative;
+    width: 100%;
+    padding-top: 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.cita{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cita i:first-child{
+    color: #5db0fe;
+    margin: 0.8rem;
+    border-radius: 50%;
+}
+#cita-icon{
+    padding: 0.8rem;
+}
+.cita-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.cita h2{
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0.2rem;
+}
+.actividad-cita{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.cita p{
+    font-size: 0.8rem;
+    margin-right: 1rem;
+    color: #3b9aff;
+}
+
+
+
+/*AGREGAR**/
+ #agregar-cita{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: #5db0fe;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    font-size: 1rem;
+    color: #fff;
+}
+
+#agregar-predicción{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: #2e9de2;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 1rem;
+    color: #fff;
+}
+
+
+
