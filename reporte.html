@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="reporte.css" />
+</head>
+<body>
+    <div id="Letrero-container">
+        <!--BOTÓN DE REGRESO-->
+        <i class="fa-solid fa-plus" id="letrero-icon"></i> 
+        <div class="container">
+            <h1>Reporte</h1>
+        </div>
+    </div>
+    <div id="meses-opciones-container">
+        <button class="mes">
+          <p>1 Mes</p>
+        </button>
+        <button class="mes">
+          <p>1 Mes</p>
+        </button>
+        <button class="mes">
+            <p>1 Mes</p>
+        </button>
+        <button class="mes">
+            <p>1 Mes</p>
+        </button>
+        <button class="mes">
+            <p>1 Mes</p>
+        </button>
+        <button class="mes">
+            <p>1 Mes</p>
+        </button>
+        <button class="mes">
+            <p>1 Mes</p>
+        </button>
+        <button class="mes">
+            <p>1 Mes</p>
+        </button>
+        <button class="mes">
+            <p>1 Mes</p>
+        </button>
+    </div>
+
+    <div id="graphic-container">
+        <main>
+            <!--Canvas contendrá la imágen de la gráfica, y el script es el que la hace-->
+            <canvas id="grafica"></canvas>
+            <script src="reporte.js"></script>
+        </main>            
+    </div>
+
+    <div id="citas">
+        <main id="contenedor-presiones">      
+            <div class="presion" href="#">
+                <div class="presion-left">
+                    <i class="fa-solid fa-notes-medical" id="presion-icon"></i>
+                    <div class="presion-info">
+                    <h2>VALOR</h2>
+                    <p>Presión Sistólica</p>
+                    </div>
+                </div>          
+     
+            </div>        
+            <div class="presion" href="#">
+                <div class="presion-left">
+                    <i class="fa-solid fa-notes-medical" id="presion-icon"></i>
+                    <div class="presion-info">
+                    <h2>VALOR</h2>
+                    <p>Presión Diastólica</p>
+                    </div>
+                </div>           
+            </div>        
+        </main>
+    </div>
+
+    <script src="https://kit.fontawesome.com/eee10799b3.js" crossorigin="anonymous"></script>
+</body>
+</html>
