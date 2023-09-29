@@ -39,7 +39,7 @@ $.ajax({
                     </div>
                     <div class="actividad-persona">
                     <div class="status"></div>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="citas-form.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
             `;
@@ -88,7 +88,7 @@ $.ajax({
                                 </div>
                                 <div class="actividad-persona">
                                 <div class="status"></div>
-                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="citas-form.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                                 </div>
                             </div>
                         `;
