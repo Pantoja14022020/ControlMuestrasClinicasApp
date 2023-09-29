@@ -24,7 +24,7 @@ body{
     font-size: 1.5rem;
     font-weight: 900;
 }
-#search-comunidad{
+#search-municipio{
     width: 100%;
     outline: none;
     border: none;
@@ -34,6 +34,9 @@ body{
     color: #575757;
     font-size: 0.9rem;
 }
+
+
+
 #contenedor-carpetas{
     width: 100%;
     display: flex;

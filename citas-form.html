@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Citas Form</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,312 +11,468 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="citas-form.css" />
-</head>
-<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
     <div id="main-container">
-        <div id="letrero">
-            <i class="fa-solid fa-user-large" id="form-icon"></i>
-            <div class="titulo">
-                <h1>Cita</h1>
-                <p>Ingrese su información correctamente</p>
-            </div>
+      <div id="letrero">
+        <i class="fa-solid fa-user-large" id="form-icon"></i>
+        <div class="titulo">
+          <h1>Cita</h1>
+          <p>Ingrese su información correctamente</p>
         </div>
-        <main id="contenedor-form">
-            <form action="">
-                <!--CAMPO 1-->
-                <div class="peso-input">
-                    <div class="input-box">
-                        <label for="peso">Peso</label>
-                        <input type="text" id="peso" name="peso" inputmode="numeric" placeholder="0" required>
-                    </div>
+      </div>
+      <main id="contenedor-form">
+        <form action="">
+          <!--CAMPO 1-->
+          <div class="peso-input">
+            <div class="input-box">
+              <label for="peso">Peso</label>
+              <input
+                type="text"
+                id="peso"
+                name="peso"
+                inputmode="numeric"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 1-->
+          <!--CAMPO 2-->
+          <div class="imc-input">
+            <div class="input-box">
+              <label for="imc">IMC</label>
+              <input
+                type="text"
+                id="imc"
+                name="imc"
+                step="00.01"
+                inputmode="numeric"
+                placeholder="00.00"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 2-->
+          <!--CAMPO 3-->
+          <div class="sobrepeso-input">
+            <div class="checkbox">
+              <input type="checkbox" id="sobrepeso" value="1" />
+              <label for="sobrepeso">Sobrepeso</label>
+            </div>
+          </div>
+          <!--FIN CAMPO 3-->
+          <!--CAMPO 4-->
+          <div class="cc-input">
+            <div class="input-box">
+              <label for="cc">CC</label>
+              <input
+                type="text"
+                id="cc"
+                name="cc"
+                inputmode="numeric"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 4-->
+          <!--CAMPO 5-->
+          <div class="pa_sistolica-input">
+            <div class="input-box">
+              <label for="pa_sistolica">Presión Arterial Sistolica</label>
+              <input
+                type="text"
+                id="pa_sistolica"
+                name="pa_sistolica"
+                inputmode="numeric"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 5-->
+          <!--CAMPO 6-->
+          <div class="pa_diastolica-input">
+            <div class="input-box">
+              <label for="pa_diastolica">Presión Arterial Diastolica</label>
+              <input
+                type="text"
+                id="pa_diastolica"
+                name="pa_diastolica"
+                inputmode="numeric"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 6-->
+          <!--CAMPO 7-->
+          <div class="gluc_ayuno-input">
+            <div class="input-box">
+              <label for="gluc_ayuno">Glucosa Ayuno</label>
+              <input
+                type="text"
+                id="gluc_ayuno"
+                name="gluc_ayuno"
+                inputmode="numeric"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 7-->
+          <!--CAMPO 8-->
+          <div class="gluc_casual-input">
+            <div class="input-box">
+              <label for="gluc_casual">Glucosa Casual</label>
+              <input
+                type="text"
+                id="gluc_casual"
+                name="gluc_casual"
+                inputmode="numeric"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 8-->
+          <!--CAMPO 9-->
+          <div class="hba1c-input">
+            <div class="input-box">
+              <label for="hba1c">hba1c</label>
+              <input
+                type="text"
+                id="hba1c"
+                name="hba1c"
+                step="0.0"
+                inputmode="numeric"
+                placeholder="0.0"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 9-->
+          <!--CAMPO 10-->
+          <div class="fondo_de_ojo-input">
+            <div class="input-box">
+              <label for="fondo_de_ojo">Fondo de ojo</label>
+              <input
+                type="text"
+                id="fondo_de_ojo"
+                name="fondo_de_ojo"
+                inputmode="numeric"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 10-->
+          <!--CAMPO 11-->
+          <div class="id_estado-input">
+            <div class="input-box">
+              <label>Estado</label>
+              <select class="selector" name="id_estado" required id="id_estado">
+                <option selected hidden value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </div>
+          </div>
+          <!--FIN CAMPO 11-->
+          <!--CAMPO 12-->
+          <div class="colesterol_total_mg_dl-input">
+            <div class="input-box">
+              <label for="colesterol_total_mg_dl">colesterol_total_mg_dl</label>
+              <input
+                type="text"
+                id="colesterol_total_mg_dl"
+                name="colesterol_total_mg_dl"
+                inputmode="numeric"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 12-->
+          <!--CAMPO 13-->
+          <div class="colesterol_ldl_mg_dl-input">
+            <div class="input-box">
+              <label for="colesterol_ldl_mg_dl">Colesterol_ldl_mg_dl</label>
+              <input
+                type="number"
+                id="colesterol_ldl_mg_dl"
+                name="colesterol_ldl_mg_dl"
+                inputmode="numeric"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 13-->
+          <!--CAMPO 14-->
+          <div class="colesterol_hdl_mg_dl-input">
+            <div class="input-box">
+              <label for="colesterol_hdl_mg_dl">Colesterol hdl_mg_dl</label>
+              <input
+                type="text"
+                id="colesterol_hdl_mg_dl"
+                name="colesterol_hdl_mg_dl"
+                inputmode="numeric"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 14-->
+          <!--CAMPO 15-->
+          <div class="trigliceridos_mg_dl-input">
+            <div class="input-box">
+              <label for="trigliceridos_mg_dl">Trigliceridos mg_dl</label>
+              <input
+                type="text"
+                id="trigliceridos_mg_dl"
+                name="trigliceridos_mg_dl"
+                inputmode="numeric"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 15-->
+          <!--CAMPO 16-->
+          <div class="microalbuminuria-input">
+            <div class="input-box">
+              <label for="microalbuminuria">Microalbuminuria</label>
+              <input
+                type="text"
+                id="microalbuminuria"
+                name="microalbuminuria"
+                inputmode="numeric"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 16-->
+          <!--CAMPO 17-->
+          <div class="creatinina-input">
+            <div class="input-box">
+              <label for="creatinina">Creatinina</label>
+              <input
+                type="text"
+                id="creatinina"
+                name="creatinina"
+                inputmode="numeric"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 17-->
+          <!--CAMPO 18-->
+          <div class="GAMEC-input">
+            <div class="input-box">
+              <label for="GAMEC">GAMEC</label>
+              <input
+                type="text"
+                id="GAMEC"
+                name="GAMEC"
+                inputmode="numeric"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 18-->
+          <!--CAMPO 19-->
+          <div class="complicaciones-input">
+            <div class="input-box">
+              <label>Complicaciones</label>
+              <input type="text" id="complicaciones" name="complicaciones" />
+            </div>
+          </div>
+          <!--FIN CAMPO 19-->
+          <!--CAMPO 20-->
+          <div class="id_grado-input">
+            <div class="input-box">
+              <label>Grado</label>
+              <select class="selector" name="id_grado" required>
+                <option selected hidden value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </div>
+          </div>
+          <!--FIN CAMPO 20-->
+          <!--CAMPO 21-->
+          <div class="id_referencia-input">
+            <div class="input-box">
+              <label>Referencia</label>
+              <select class="selector" name="id_referencia" required>
+                <option selected hidden value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </div>
+          </div>
+          <!--FIN CAMPO 21-->
+          <!--CAMPO 22-->
+          <div class="id_motivo_baja-input">
+            <div class="input-box">
+              <label>Motivo de baja</label>
+              <select class="selector" name="id_motivo_baja" required>
+                <option selected hidden value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </div>
+          </div>
+          <!--FIN CAMPO 22-->
+          <!--CAMPO 23-->
+          <div class="vacuna_antiinfluenza-input">
+            <div class="checkbox">
+              <input type="checkbox" id="vacuna_antiinfluenza" value="1" />
+              <label for="vacuna_antiinfluenza">Vacuna Antiinfluenza</label>
+            </div>
+          </div>
+          <!--FIN CAMPO 23-->
+          <!--CAMPO 24-->
+          <div class="dm-input">
+            <div class="input-box">
+              <label for="dm">dm</label>
+              <input
+                type="text"
+                id="dm"
+                name="dm"
+                inputmode="numeric"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 24-->
+          <!--CAMPO 25-->
+          <div class="hta-input">
+            <div class="input-box">
+              <label for="hta">hta</label>
+              <input
+                type="text"
+                id="hta"
+                name="hta"
+                inputmode="numeric"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 25-->
+          <!--CAMPO 26-->
+          <div class="obe-input">
+            <div class="input-box">
+              <label for="obe">obe</label>
+              <input
+                type="text"
+                id="obe"
+                name="obe"
+                inputmode="numeric"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 26-->
+          <!--CAMPO 27-->
+          <div class="dlp-input">
+            <div class="input-box">
+              <label for="dlp">dlp</label>
+              <input
+                type="text"
+                id="dlp"
+                name="dlp"
+                inputmode="numeric"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 27-->
+          <!--CAMPO 28-->
+          <div class="sm-input">
+            <div class="input-box">
+              <label for="sm">SM</label>
+              <input
+                type="text"
+                id="sm"
+                name="sm"
+                inputmode="numeric"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+          <!--FIN CAMPO 28-->
+          <!--CAMPO 29-->
+          <div class="no_farmacologico-input">
+            <div class="input-box">
+              <label for="no_farmacologico">no Farmacologicos</label>
+              <div class="checkbox-varios">
+                <div class="checkbox">
+                  <input type="checkbox" id="1" value="1" />
+                  <label for="1">1</label>
                 </div>
-                <!--FIN CAMPO 1-->
-                <!--CAMPO 2-->
-                <div class="imc-input">
-                    <div class="input-box">
-                        <label for="imc">IMC</label>
-                        <input type="text" id="imc" name="imc" step="00.01" inputmode="numeric" placeholder="00.00" required>
-                    </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="2" value="2" />
+                  <label for="2">2</label>
                 </div>
-                <!--FIN CAMPO 2-->
-                <!--CAMPO 3-->
-                <div class="sobrepeso-input">
-                    <div class="checkbox">
-                        <input type="checkbox" id="sobrepeso" value="1" />
-                        <label for="sobrepeso">Sobrepeso</label>
-                    </div>  
+                <div class="checkbox">
+                  <input type="checkbox" id="3" value="3" />
+                  <label for="3">3</label>
                 </div>
-                <!--FIN CAMPO 3-->
-                <!--CAMPO 4-->
-                <div class="cc-input">
-                    <div class="input-box">
-                        <label for="cc">CC</label>
-                        <input type="text" id="cc" name="cc" inputmode="numeric" placeholder="0" required>
-                    </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="4" value="4" />
+                  <label for="4">4</label>
                 </div>
-                <!--FIN CAMPO 4-->
-                <!--CAMPO 5-->
-                <div class="pa_sistolica-input">
-                    <div class="input-box">
-                        <label for="pa_sistolica">Presión Arterial Sistolica</label>
-                        <input type="text" id="pa_sistolica" name="pa_sistolica" inputmode="numeric" placeholder="0" required>
-                    </div>
+              </div>
+            </div>
+          </div>
+          <!--FIN CAMPO 29-->
+          <!--CAMPO 30-->
+          <div class="farmacologicos-input">
+            <div class="input-box">
+              <label for="farmacologicos">Farmacologicos</label>
+              <div class="checkbox-varios">
+                <div class="checkbox">
+                  <input type="checkbox" id="1" value="1" />
+                  <label for="1">1</label>
                 </div>
-                <!--FIN CAMPO 5-->
-                <!--CAMPO 6-->
-                <div class="pa_diastolica-input">
-                    <div class="input-box">
-                        <label for="pa_diastolica">Presión Arterial Diastolica</label>
-                        <input type="text" id="pa_diastolica" name="pa_diastolica" inputmode="numeric" placeholder="0" required>
-                    </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="2" value="2" />
+                  <label for="2">2</label>
                 </div>
-                <!--FIN CAMPO 6-->
-                <!--CAMPO 7-->
-                <div class="gluc_ayuno-input">
-                    <div class="input-box">
-                        <label for="gluc_ayuno">Glucosa Ayuno</label>
-                        <input type="text" id="gluc_ayuno" name="gluc_ayuno" inputmode="numeric" placeholder="0" required>
-                    </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="3" value="3" />
+                  <label for="3">3</label>
                 </div>
-                <!--FIN CAMPO 7-->
-                <!--CAMPO 8-->
-                <div class="gluc_casual-input">
-                    <div class="input-box">
-                        <label for="gluc_casual">Glucosa Casual</label>
-                        <input type="text" id="gluc_casual" name="gluc_casual" inputmode="numeric" placeholder="0" required>
-                    </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="4" value="4" />
+                  <label for="4">4</label>
                 </div>
-                <!--FIN CAMPO 8-->
-                <!--CAMPO 9-->
-                <div class="hba1c-input">
-                    <div class="input-box">
-                        <label for="hba1c">hba1c</label>
-                        <input type="text" id="hba1c" name="hba1c" step="0.0" inputmode="numeric" placeholder="0.0" required>
-                    </div>
-                </div>
-                <!--FIN CAMPO 9-->
-                <!--CAMPO 10-->
-                <div class="fondo_de_ojo-input">
-                    <div class="input-box">
-                        <label for="fondo_de_ojo">Fondo de ojo</label>
-                        <input type="text" id="fondo_de_ojo" name="fondo_de_ojo" inputmode="numeric" placeholder="0" required>
-                    </div>
-                </div>
-                <!--FIN CAMPO 10-->
-                <!--CAMPO 11-->
-                <div class="id_estado-input">
-                    <div class="input-box">
-                        <label>Estado</label>
-                        <select class="selector" name="id_estado" required>
-                            <option selected hidden value=""></option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>                                  
-                        </select>
-                    </div>
-                </div>
-                <!--FIN CAMPO 11-->
-                <!--CAMPO 12-->
-                <div class="colesterol_total_mg_dl-input">
-                    <div class="input-box">
-                        <label for="colesterol_total_mg_dl">colesterol_total_mg_dl</label>
-                        <input type="text" id="colesterol_total_mg_dl" name="colesterol_total_mg_dl" inputmode="numeric" placeholder="0" required>
-                    </div>
-                </div>
-                <!--FIN CAMPO 12-->
-                <!--CAMPO 13-->
-                <div class="colesterol_ldl_mg_dl-input">
-                    <div class="input-box">
-                        <label for="colesterol_ldl_mg_dl">Colesterol_ldl_mg_dl</label>
-                        <input type="text" id="colesterol_ldl_mg_dl" name="colesterol_ldl_mg_dl" inputmode="numeric" placeholder="0" required>
-                    </div>
-                </div>
-                <!--FIN CAMPO 13-->
-                <!--CAMPO 14-->
-                <div class="colesterol_hdl_mg_dl-input">
-                    <div class="input-box">
-                        <label for="colesterol_hdl_mg_dl">Colesterol hdl_mg_dl</label>
-                        <input type="text" id="colesterol_hdl_mg_dl" name="colesterol_hdl_mg_dl" inputmode="numeric" placeholder="0" required>
-                    </div>
-                </div>
-                <!--FIN CAMPO 14-->
-                <!--CAMPO 15-->
-                <div class="trigliceridos_mg_dl-input">
-                    <div class="input-box">
-                        <label for="trigliceridos_mg_dl">Trigliceridos mg_dl</label>
-                        <input type="text" id="trigliceridos_mg_dl" name="trigliceridos_mg_dl" inputmode="numeric" placeholder="0" required>
-                    </div>
-                </div>
-                <!--FIN CAMPO 15-->
-                <!--CAMPO 16-->
-                <div class="microalbuminuria-input">
-                    <div class="input-box">
-                        <label for="microalbuminuria">Microalbuminuria</label>
-                        <input type="text" id="microalbuminuria" name="microalbuminuria" inputmode="numeric" placeholder="0" required>
-                    </div>
-                </div>
-                <!--FIN CAMPO 16-->
-                <!--CAMPO 17-->
-                <div class="creatinina-input">
-                    <div class="input-box">
-                        <label for="creatinina">Creatinina</label>
-                        <input type="text" id="creatinina" name="creatinina" inputmode="numeric" placeholder="0" required>
-                    </div>
-                </div>
-                <!--FIN CAMPO 17-->
-                <!--CAMPO 18-->
-                <div class="GAMEC-input">
-                    <div class="input-box">
-                        <label for="GAMEC">GAMEC</label>
-                        <input type="text" id="GAMEC" name="GAMEC" inputmode="numeric" placeholder="0" required>
-                    </div>
-                </div>
-                <!--FIN CAMPO 18-->
-                <!--CAMPO 19-->
-                <div class="complicaciones-input">
-                    <div class="input-box">
-                        <label>Complicaciones</label>
-                        <input type="text" id="complicaciones" name="complicaciones">
-                    </div>
-                </div>
-                <!--FIN CAMPO 19-->
-                <!--CAMPO 20-->
-                <div class="id_grado-input">
-                    <div class="input-box">
-                        <label>Grado</label>
-                        <select class="selector" name="id_grado" required>
-                            <option selected hidden value=""></option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>                                  
-                        </select>
-                    </div>
-                </div>
-                <!--FIN CAMPO 20-->
-                <!--CAMPO 21-->
-                <div class="id_referencia-input">
-                    <div class="input-box">
-                        <label>Referencia</label>
-                        <select class="selector" name="id_referencia" required>
-                            <option selected hidden value=""></option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>                                  
-                        </select>
-                    </div>
-                </div>
-                <!--FIN CAMPO 21-->
-                <!--CAMPO 22-->
-                <div class="id_motivo_baja-input">
-                    <div class="input-box">
-                        <label>Motivo de baja</label>
-                        <select class="selector" name="id_motivo_baja" required>
-                            <option selected hidden value=""></option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>                                  
-                        </select>
-                    </div>
-                </div>
-                <!--FIN CAMPO 22-->
-                <!--CAMPO 23-->
-                <div class="vacuna_antiinfluenza-input">
-                    <div class="checkbox">
-                        <input type="checkbox" id="vacuna_antiinfluenza" value="1" />
-                        <label for="vacuna_antiinfluenza">Vacuna Antiinfluenza</label>
-                    </div>  
-                </div>
-                <!--FIN CAMPO 23-->
-                <!--CAMPO 24-->
-                <div class="dm-input">
-                    <div class="input-box">
-                        <label for="dm">dm</label>
-                        <input type="text" id="dm" name="dm" inputmode="numeric" placeholder="0" required>
-                    </div>
-                </div>
-                <!--FIN CAMPO 24-->
-                <!--CAMPO 25-->
-                <div class="hta-input">
-                    <div class="input-box">
-                        <label for="hta">hta</label>
-                        <input type="text" id="hta" name="hta" inputmode="numeric" placeholder="0" required>
-                    </div>
-                </div>
-                <!--FIN CAMPO 25-->
-                <!--CAMPO 26-->
-                <div class="obe-input">
-                    <div class="input-box">
-                        <label for="obe">obe</label>
-                        <input type="text" id="obe" name="obe" inputmode="numeric" placeholder="0" required>
-                    </div>
-                </div>
-                <!--FIN CAMPO 26-->
-                <!--CAMPO 27-->
-                <div class="dlp-input">
-                    <div class="input-box">
-                        <label for="dlp">dlp</label>
-                        <input type="text" id="dlp" name="dlp" inputmode="numeric" placeholder="0" required>
-                    </div>
-                </div>
-                <!--FIN CAMPO 27-->
-                <!--CAMPO 28-->
-                <div class="sm-input">
-                    <div class="input-box">
-                        <label for="sm">SM</label>
-                        <input type="text" id="sm" name="sm" inputmode="numeric" placeholder="0" required>
-                    </div>
-                </div>
-                <!--FIN CAMPO 28-->
-                <!--CAMPO 29-->
-                <div class="no_farmacologico-input">
-                    <div class="input-box">
-                        <label for="no_farmacologico">no Farmacologicos</label>
-                        <div class="checkbox-varios">
-                            <div class="checkbox">
-                                <input type="checkbox" id="1" value="1" />
-                                <label for="1">1</label>
-                            </div>
-                            <div class="checkbox">
-                                <input type="checkbox" id="2" value="2" />
-                                <label for="2">2</label>
-                            </div> 
-                            <div class="checkbox">
-                                <input type="checkbox" id="3" value="3" />
-                                <label for="3">3</label>
-                            </div> 
-                            <div class="checkbox">
-                                <input type="checkbox" id="4" value="4" />
-                                <label for="4">4</label>
-                            </div>   
-                        </div>
-                    </div>
-                </div>
-                <!--FIN CAMPO 29-->
-                <!--CAMPO 30-->
-                <div class="farmacologicos-input">
-                    <div class="input-box">
-                        <label for="farmacologicos">Farmacologicos</label>
-                        <div class="checkbox-varios">
-                            <div class="checkbox">
-                                <input type="checkbox" id="1" value="1" />
-                                <label for="1">1</label>
-                            </div>
-                            <div class="checkbox">
-                                <input type="checkbox" id="2" value="2" />
-                                <label for="2">2</label>
-                            </div> 
-                            <div class="checkbox">
-                                <input type="checkbox" id="3" value="3" />
-                                <label for="3">3</label>
-                            </div> 
-                            <div class="checkbox">
-                                <input type="checkbox" id="4" value="4" />
-                                <label for="4">4</label>
-                            </div>   
-                        </div>
-                    </div>                  
-                </div>
-                <!--FIN CAMPO 30-->
-                <button id="enviar-cita" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
-            </form>
-        </main>
+              </div>
+            </div>
+          </div>
+          <!--FIN CAMPO 30-->
+          <button id="enviar-cita" type="submit">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </main>
     </div>
-    <script src="https://kit.fontawesome.com/eee10799b3.js" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://kit.fontawesome.com/eee10799b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="cita-form.js"></script>
+  </body>
 </html>
