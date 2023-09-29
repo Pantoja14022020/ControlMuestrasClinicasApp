@@ -35,13 +35,16 @@ body{
     font-size: 0.9rem;
 }
 #contenedor-carpetas{
-    width: 100%;
+    width: 90%;
+    margin: auto;
+    border-radius: 0.4rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
     padding: 0.8rem;
+    background-color: #fff;
 }
 .carpeta{
     width: 46%;
@@ -53,7 +56,7 @@ body{
     background-color: #fff;
     padding: 0.5rem;
     border-radius: 0.5rem;
-    box-shadow: rgba(102, 130, 252, 0.1) 0px 10px 50px;
+    /*box-shadow: rgba(102, 130, 252, 0.1) 0px 10px 50px;*/
     transition: all ease-in-out 0.3s;
     margin: 0.3rem;
     text-decoration: none;
