@@ -35,7 +35,7 @@ body{
     font-size: 0.9rem;
 }
 #contenedor-carpetas{
-    width: 100%;
+    width: 95%;
     margin: auto;
     border-radius: 0.4rem;
     display: flex;
