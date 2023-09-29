@@ -9,6 +9,10 @@
 }*/
 
 #regresar{
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,13 +22,12 @@
     height: 40px;
     border-radius: 0.4rem;
     padding: 0.5rem;
-    margin-left: 1rem;
-    margin-top: 0.5rem;
     background-color: #2e9de2;
     font-size: 1.7rem;
 }
 
 .busqueda{
+    margin-top: 4rem;
     padding: 1rem;
 }
 #nav-search{
