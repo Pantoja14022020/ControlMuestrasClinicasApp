@@ -4,106 +4,94 @@
     font-family: 'Roboto Flex', sans-serif;
 }
 
-body{
-    background-color: hsl(251, 100%, 97%);
-}
-
-/*LETRERO*/
-#letrero{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content:left;
-    flex-wrap: nowrap;
-    align-items: center;
-    border-radius: 0.5rem;
-    padding-top: 1rem;
-}
-#letrero .titulo{
-    padding-left: 0.6rem;
-    font-size: 0.8rem;
-    letter-spacing: 0.05rem;
-}
-#form-icon{
-    padding: 0.8rem;
-    background-color: #2e9de2;
-    border-radius: 50%;
-    margin-left: 1rem;
-    color: #fff;
-}
-
-/*CITA FORM*/
-#contenedor-form{
-    position: relative;
-    margin-top: 1.2rem;
-    width: 100%;
-    padding-top: 0rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-}
-.input-box{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 0.5rem;
-    margin-bottom: 0.5rem;
-    padding-bottom: 1rem;
-}
-.input-box label{
-    padding: 1rem;
-}
-form .checkbox {
-    padding: 1rem;
-
-}
-form .checkbox input {
-    height: auto;
-}
-form :where(input, select) {
-    height: 40px;
-    padding: 0 1em;
-    border-radius: 7px;
-    outline-color: #2e9de2;
-    border: 1px;
-    background-color: #f2f2f2;
-}
-form label {
-    font-size: 1rem;
-    font-weight: 600;
-}
-form input{
-    max-width: 70px;
-    text-align: center;
-    margin-right: 1em;
-}
-
-
-
-
-
-/*BOTON*/
-#enviar-cita{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
-    width: 30px;
-    height: 30px;
-    outline: none;
-    border: none;
-    background-color: #2e9de2;
-    border-radius: 50%;
-    font-size: 0.9rem;
+#regresar{
     position: fixed;
-    bottom: 1rem;
+    left: 1rem;
+    top: 1rem;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+    font-size: 1.7rem;
+}
+
+
+#header-cita-form{
+    width: 100%;
+    height: 220px;
+    background-color: #2e9de2;
+    padding-top: 1.3rem;
+    position: relative;
+}
+#calendario-icon{
+    position: absolute;
+    top: 1rem;
     right: 1rem;
-    font-size: 1rem;
-    color: #fff;
+    color: white;
+}
+#header-cita-form h1{
+    margin-left: 4rem;
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+    color: white;
+}
+#header-cita-form h3{
+    position: absolute;
+    bottom: 1rem;
+    left: 1.4rem;
+    color: white;
+    letter-spacing: 0.1rem;
+}
+#header-cita-form h3 span{
+    color: rgb(197, 217, 255);
+}
+#header-cita-form h1 span{
+    color: rgb(197, 217, 255);
+}
+#container-info-header{
+    background-color: white;
+    width: fit-content;
+    margin: auto;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    margin-top: 2rem;
+}
+#cih-nombre{
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+#cih-nombre > i{
+    color: #2e9de2;
+    margin-right: 1rem;
+}
+#cih-nombre > h5{
+    letter-spacing: 0.03rem;
+    font-weight: 300;
+    color: #636363;
+}
+#cih-estatus{
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+#cih-estatus > i{
+    color: #2e9de2;
+    margin-right: 1rem;
+}
+#cih-estatus > h5{
+    letter-spacing: 0.03rem;
+    font-weight: 300;
+    color: #636363;
 }
