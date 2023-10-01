@@ -1,9 +1,10 @@
 let urlGetMunicipios = 'https://clinicalserviceapi.onrender.com/api/paciente';
 const unidadSeleccionada = JSON.parse(localStorage.getItem('carpetaSeleccionada')).toUpperCase();
-console.log(localStorage.getItem('carpetaSeleccionada'))
+//console.log(localStorage.getItem('carpetaSeleccionada'))
 const contenedorPersonas = document.getElementById('contenedor-personas');
 const loaderAnimation = document.getElementById('loader-animation');//Selecciono el loader que hice
 const searchPersona = document.getElementById('search-persona');//Selecciono el input de buscador
+
 
 //ESTO REALIZA LA PETICION Y LO PINTA EN LA INTERFAZ
 $.ajax({
@@ -12,7 +13,7 @@ $.ajax({
     success: function( {pacientes} ) {
        
         //borrar el localstorage de la carpeta seleccionada
-        //localStorage.removeItem('carpetaSeleccionada')
+        localStorage.removeItem('pacienteSeleccionado')
 
         const pacientesDeUnidad = new Set();
 
@@ -39,7 +40,7 @@ $.ajax({
                     </div>
                     <div class="actividad-persona">
                     <div class="status"></div>
-                    <a href="citas-form.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="citas-form.html" id="btn-ver-cita-paciente"  data-id="${id_paciente}"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
             `;
@@ -88,7 +89,7 @@ $.ajax({
                                 </div>
                                 <div class="actividad-persona">
                                 <div class="status"></div>
-                                <a href="citas-form.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="citas-form.html" id="btn-ver-cita-paciente" data-id="${id_paciente}"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                                 </div>
                             </div>
                         `;
@@ -105,21 +106,21 @@ $.ajax({
 
 
 
-        /*
-        //CAPTURAR EVENTO CUANDO SE DE CLICK EN UNA CARPETA Y GUARDAR EL DATO EN EL LOCAL STORAGE
-        containerUnidades.childNodes.forEach(carpeta => {
-            carpeta.addEventListener('click', e => {
+        
+        //CAPTURAR EVENTO CUANDO SE DE CLICK EN EL BOTON PARA VER CITAS DE UN PACIENTE Y GUARDAR EN LOCAL STORAGE
+        const btnsVerCita = document.querySelectorAll('#btn-ver-cita-paciente');
 
+        btnsVerCita.forEach(btn => {
+            btn.addEventListener('click', e => {
                 let valorSeleccionado = "";
-                if(!e.target.getAttribute('data-name-unidad')){
-                    valorSeleccionado = e.target.parentNode.getAttribute('data-name-unidad')
+                if(!e.target.getAttribute('data-id')){
+                    valorSeleccionado = e.target.parentNode.getAttribute('data-id')
                 }else{
-                    valorSeleccionado = e.target.getAttribute('data-name-unidad')
+                    valorSeleccionado = e.target.getAttribute('data-id')
                 }
-                localStorage.setItem('carpetaSeleccionada', JSON.stringify(valorSeleccionado));
-
+                localStorage.setItem('pacienteSeleccionado', JSON.stringify(valorSeleccionado));
             });
-        })*/
+        });
       
     },
     error: function(xhr, status, error) {
