@@ -52,7 +52,7 @@ $.ajax({
     success: function( {citas} ) {
 
         //borrar el localstorage de la carpeta seleccionada
-        //localStorage.removeItem('citaSeleccionada')
+        localStorage.removeItem('citaSeleccionada')
 
         const citasPaciente = new Set();
 
@@ -84,7 +84,7 @@ $.ajax({
                         <b>${fechaEnPalabras}</b>
                         <p>${horaEnPalabras}</p>
                     </div>
-                    <button id="ver-cita" data-id="${id_cita}"><i class="fa-solid fa-chevron-right"></i></button>
+                    <a id="ver-cita" data-id="${id_cita}" href="cita-details.html"><i class="fa-solid fa-chevron-right"></i></a>
                 </div>
             `;
             contenedorCitas.innerHTML += citaHTML;
@@ -92,6 +92,23 @@ $.ajax({
 
         loaderAnimation.classList.add('hide');
         
+
+
+        //LOGICA CUANDO SE DE CLICK EN SU EN LA FLECHITA DE VER MAS DETALLES DE UNA CITA EN ESPECIFICO
+        const btnsVerCita = document.querySelectorAll('#ver-cita');
+        
+        btnsVerCita.forEach(btn => {
+            btn.addEventListener('click', e => {
+                let valorSeleccionado = "";
+                if(!e.target.getAttribute('data-id')){
+                    valorSeleccionado = e.target.parentNode.getAttribute('data-id')
+                }else{
+                    valorSeleccionado = e.target.getAttribute('data-id')
+                }
+                localStorage.setItem('citaSeleccionada', JSON.stringify(valorSeleccionado));
+            });
+        });
+
     },
     error: function(xhr, status, error) {
     console.log("No se pudo hacer la peticion")

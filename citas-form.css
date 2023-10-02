@@ -18,6 +18,7 @@
     height: 40px;
     border-radius: 0.4rem;
     padding: 0.5rem;
+    background-color: #2e9de2;
     font-size: 1.7rem;
 }
 
@@ -161,7 +162,8 @@
     font-size: 1.4rem;
     color: #2e9de2;
 }
-.cita button{
+.cita a{
+    text-decoration: none;
     position: absolute;
     right: 0.5rem;
     border: none;

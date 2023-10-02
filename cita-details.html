@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalles Cita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="cita-details.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <header id="header-cita-details">
+      <a href="citas-form.html" id="regresar">
+        <i class="fa-solid fa-chevron-left"></i>
+      </a>
+      <p>23/08/2023<span> 14:23:25</span><i class="fa-regular fa-clock"></i></p>
+    </header>
+    <main id="details-cita">
+      <div id="muestras-clinicas">
+        <div id="hipertension">
+          <div id="img-hipertension">
+            <img src="./assets/hipertension.png" alt="hipertension" />
+          </div>
+          <div id="datos-hipertension">
+            <div id="loader-animation" class="loader"></div>
+          </div>
+        </div>
+
+        <div id="glucosa">
+          <div id="img-glucosa">
+            <img src="./assets/glucosa.png" alt="glucosa" />
+          </div>
+          <div id="datos-glucosa">
+            <div id="loader-animation" class="loader"></div>
+          </div>
+        </div>
+
+        <div id="colesterol">
+          <div id="img-colesterol">
+            <img src="./assets/colesterol.png" alt="colesterol" />
+          </div>
+          <div id="datos-colesterol">
+            <div id="loader-animation" class="loader"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="datos-clinicos">
+      <div id="loader-animation" class="loader"></div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/eee10799b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="cita-details.js"></script>
+  </body>
+</html>
